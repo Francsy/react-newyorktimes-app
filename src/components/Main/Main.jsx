@@ -13,8 +13,7 @@ class Main extends Component {
     }
   }
 
-  addNew = article => this.setState({ news: [article, ...this.state.newArticles]})
-
+  addNew = article => this.setState({ ourArticles: [article, ...this.state.ourArticles]})
 
   render() {
     return <main>

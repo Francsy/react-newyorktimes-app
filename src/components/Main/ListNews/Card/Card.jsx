@@ -8,6 +8,7 @@ class Card extends Component {
       <h3>{this.props.new.date} - {this.props.new.section} - {this.props.new.authorLine}</h3>
       <p>{this.props.new.abstract}</p>
       <button onClick={this.props.delete}>Remove</button>
+      <button onClick={() => window.open(this.props.new.url, '_blank')}>Visit</button>
     </article>;
   }
 }
