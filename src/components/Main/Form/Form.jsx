@@ -37,7 +37,6 @@ class Form extends Component {
     }
   }
 
-
   getDate = () => {
     const currentDate = new Date()
     const currentYear = currentDate.getFullYear()
