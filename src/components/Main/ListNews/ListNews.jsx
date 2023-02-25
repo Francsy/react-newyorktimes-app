@@ -7,12 +7,14 @@ class ListNews extends Component {
   constructor (props){
     super(props)
     this.state = {
-      news: []
+      news: [],
+      failed: false
     }
   }
 
   async componentDidMount() {
     try {
+      
       const res = await axios.get(`https://api.nytimes.com/svc/topstories/v2/science.json?api-key=${process.env.REACT_APP_NYT}`)
       let data = await res.data.results
       data = data.filter((article, i) => i >= (data.length - 5))
@@ -34,11 +36,12 @@ class ListNews extends Component {
         this.setState({news: [...nytNews]})
       }
     } catch (err) {
-      console.log(err) // Hacer algo de magia por aqui
+      this.setState({ failed: true})    
     }
   }
   capTransform = text => text.charAt(0).toUpperCase() + text.slice(1)
   deleteNew = i => {
+    this.props.deleteOwnPost(this.state.news[i])
     const remainingNews = this.state.news.filter((article, j) => i !== j)
     this.setState({news: remainingNews})
   }
@@ -48,6 +51,7 @@ class ListNews extends Component {
   render() {
     return <section>
     {this.printNews(this.state.news)}
+    {this.state.failed ? <p>Failed to get news from New York Times</p> : <></>}
 
     </section>;
   }
