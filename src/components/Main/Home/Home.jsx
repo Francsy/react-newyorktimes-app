@@ -25,7 +25,7 @@ class Home extends Component {
       <input type="text" placeholder="Your name" ref={this.nameInput}/>
       <button onClick={this.saveName}>Get in!</button>
       </div> :<div>
-      <h1>Welcome {name}</h1>
+      <h1>Welcome {name}!</h1>
       <button onClick={removeName}>Bring me out!</button>
       </div>
     }
