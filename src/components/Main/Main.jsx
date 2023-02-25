@@ -14,12 +14,19 @@ class Main extends Component {
   }
 
   addNew = article => this.setState({ ourArticles: [article, ...this.state.ourArticles]})
+  deleteOwnPost = article => {
+    const chosenPost = this.state.ourArticles.find( post => post === article )
+    if (chosenPost) {
+      const remainingArticles = this.state.ourArticles.filter(post => post !== chosenPost)
+      this.setState({ourArticles: [ ...remainingArticles ]})
+    }
+  }
 
   render() {
     return <main>
       <Routes>
       <Route path='/' element={<Home />}/>
-      <Route path='/list' element={<ListNews ourArticles={this.state.ourArticles} />} />
+      <Route path='/list' element={<ListNews deleteOwnPost={this.deleteOwnPost} ourArticles={this.state.ourArticles} />} />
       <Route path='/form' element={<Form addNew={this.addNew} />} />
       </Routes>
     </main>;
