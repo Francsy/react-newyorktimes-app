@@ -12,8 +12,7 @@ class Header extends Component {
     const { name } = this.context;
     return <header>
       <Nav />
-      {name ? <h2>Welcome {name}</h2>: <></>}
-      
+      {name ? <h2>{name}</h2>: <></>}
       </header>
   }
 }
