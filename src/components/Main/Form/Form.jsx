@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { userContext } from '../../../context/userContext'
-import { /* redirect, */ Navigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 
 class Form extends Component {
   constructor(props) {
@@ -36,7 +36,6 @@ class Form extends Component {
       alert('Your post needs more information')
     }
   }
-
 
   getDate = () => {
     const currentDate = new Date()
