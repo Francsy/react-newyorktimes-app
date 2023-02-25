@@ -52,7 +52,7 @@ class Form extends Component {
         <br />
         <input type="url" name="img" placeholder="Photo url*" />
         <br />
-        <input type="url" name="url" placeholder="Article url*" />
+        <input type="url" name="url" placeholder="Article url" />
         <br />
         <textarea name="abstract" placeholder="Abstract*" rows="5" cols="20" />
         <br />
