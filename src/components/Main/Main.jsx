@@ -9,7 +9,7 @@ class Main extends Component {
     super(props)
 
     this.state = {
-      newArticles: []
+      ourArticles: []
     }
   }
 
@@ -20,7 +20,7 @@ class Main extends Component {
     return <main>
       <Routes>
       <Route path='/' element={<Home />}/>
-      <Route path='/list' element={<ListNews newArticles={this.state.newArticles} />} />
+      <Route path='/list' element={<ListNews ourArticles={this.state.ourArticles} />} />
       <Route path='/form' element={<Form addNew={this.addNew} />} />
       </Routes>
     </main>;
