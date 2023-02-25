@@ -3,7 +3,6 @@ import axios from 'axios'
 import Card from './Card'
 import {v4 as uuidv4} from 'uuid'
 
-
 class ListNews extends Component {
   constructor (props){
     super(props)
@@ -14,7 +13,6 @@ class ListNews extends Component {
 
   async componentDidMount() {
     try {
-      
       const res = await axios.get(`https://api.nytimes.com/svc/topstories/v2/science.json?api-key=${process.env.REACT_APP_NYT}`)
       let data = await res.data.results
       data = data.filter((article, i) => i >= (data.length - 5))
@@ -39,12 +37,12 @@ class ListNews extends Component {
       console.log(err) // Hacer algo de magia por aqui
     }
   }
-  capTransform = (text) => text.charAt(0).toUpperCase() + text.slice(1)
-  deleteNew = (i) => {
+  capTransform = text => text.charAt(0).toUpperCase() + text.slice(1)
+  deleteNew = i => {
     const remainingNews = this.state.news.filter((article, j) => i !== j)
     this.setState({news: remainingNews})
   }
-  printNews = (newsArr) => newsArr.map((article, i) => <Card new={article} delete={() => this.deleteNew(i)}key={uuidv4()}/>) // acabar
+  printNews = newsArr => newsArr.map((article, i) => <Card new={article} delete={() => this.deleteNew(i)} key={uuidv4()}/>) // acabar
 
 
   render() {

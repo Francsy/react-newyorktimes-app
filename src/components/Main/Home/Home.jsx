@@ -15,8 +15,6 @@ class Home extends Component {
     }
   }
 
- 
-
   render() {
     const { name, removeName } = this.context;
     return <section>
