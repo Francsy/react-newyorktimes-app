@@ -1,25 +1,90 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'
+import Main from './components/Main'
+import Footer from './components/Footer'
+import { BrowserRouter } from 'react-router-dom';
+import { userContext } from './context/userContext'
+import { useState } from 'react'
 
 function App() {
+
+  const [name, setName] = useState('')
+  const setNewName = name => setName(name);
+  const removeName = () => setName('')
+
+  const userData = {
+    name,
+    setNewName,
+    removeName
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <userContext.Provider value={userData}>
+        <BrowserRouter>
+          <Header />
+          <Main />
+        </BrowserRouter>
+      </userContext.Provider>
+      <Footer />
     </div>
   );
 }
 
 export default App;
+
+/* 
+
+************
+Version with class:
+
+
+import './App.css';
+import React from 'react'
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
+import { BrowserRouter } from  'react-router-dom';
+import { userContext } from './context/userContext';
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: ''
+    };
+
+    this.data = {
+      name: this.state.name,
+      setNewName: this.setNewName
+    }
+  }
+
+  setNewName = (name) => {
+    this.setState({ name }, () => {
+      this.data = {
+        name: this.state.name,
+        setNewName: this.setName
+      }
+    });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <userContext.Provider value ={this.data}>
+        <BrowserRouter>
+          <Header />
+          <Main />
+        </BrowserRouter>
+        </userContext.Provider>
+        <Footer />
+      </div>
+    );
+  }
+}
+
+export default App;
+
+
+ */
