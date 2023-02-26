@@ -7,6 +7,9 @@
 
     &> div{
         background-color: $second-bcolor;
+        & .large-logo {
+            height: 40px;
+        }
     }
     & span {
         color: $second-fcolor;

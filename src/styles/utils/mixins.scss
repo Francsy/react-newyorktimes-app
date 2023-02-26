@@ -1,5 +1,11 @@
 @import './variables.scss';
 
+@mixin shadow-title{
+    color: $second-bcolor;
+    margin: 7% 0%;
+    text-shadow: 2px 2px 4px $second-bcolorlight;
+}
+
 @mixin special-input-div {
     position: relative;
     display: flex;

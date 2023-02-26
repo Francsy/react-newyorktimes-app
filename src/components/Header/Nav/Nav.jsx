@@ -54,7 +54,7 @@ class Nav extends Component {
       <AppBar className="header" position="static" sx={{ backgroundColor: '#3F6E93' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
             {/* <Link to="/"> */}
             <Typography
               variant="h6"
@@ -71,7 +71,9 @@ class Nav extends Component {
                 textDecoration: 'none',
               }}
             >
-              NEW YORK TIMES
+              {/* NEW YORK TIMES */}
+              <img className="large-logo" src="/assets/logo-tnyt.png" alt="" />
+
             </Typography>
             {/* </Link> */}
 
