@@ -49,7 +49,7 @@ class ListNews extends Component {
 
 
   render() {
-    return <section>
+    return <section className="listnews">
     {this.printNews(this.state.news)}
     {this.state.failed ? <p>Failed to get news from New York Times</p> : <></>}
 

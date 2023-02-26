@@ -1,0 +1,18 @@
+.form {
+    padding: 5%;
+    &> form div {
+        display: flex;
+        flex-direction: column;
+        &> .form-select {
+            align-items: center;
+        }
+    }
+
+    & button {
+        margin: 5% 20%;
+        background-color: $second-bcolor;
+        &:hover{
+            background-color: $second-bcolorlight;
+        }
+    }
+}
