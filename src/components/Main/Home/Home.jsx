@@ -32,7 +32,7 @@ class Home extends Component {
             <span className="label-char" style={{ "--index": 2 }}>u</span>
             <span className="label-char" style={{ "--index": 3 }}>r</span>
             <span className="label-char" style={{ "--index": 4 }}>&nbsp;</span>
-            <span className="label-char" style={{ "--index": 5 }}>N</span>
+            <span className="label-char" style={{ "--index": 5 }}>n</span>
             <span className="label-char" style={{ "--index": 6 }}>a</span>
             <span className="label-char" style={{ "--index": 7 }}>m</span>
             <span className="label-char" style={{ "--index": 8 }}>e</span>
