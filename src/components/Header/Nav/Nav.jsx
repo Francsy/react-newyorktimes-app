@@ -13,7 +13,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+// import AdbIcon from '@mui/icons-material/Adb';
 
 // const pages = ['Home', 'Pricing', 'Blog'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -146,7 +146,8 @@ class Nav extends Component {
                 textDecoration: 'none',
               }}
             >
-              NYT
+            <img className="small-logo" src="/assets/small-logo.png" alt="" />
+
             </Typography>
             {/* </Link> */}
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
