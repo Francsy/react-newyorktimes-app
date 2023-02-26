@@ -50,9 +50,11 @@ class ListNews extends Component {
 
   render() {
     return <section className="listnews">
+      <h1>Last news!</h1>
+      <section className="news-box">
     {this.printNews(this.state.news)}
     {this.state.failed ? <p>Failed to get news from New York Times</p> : <></>}
-
+    </section>
     </section>;
   }
 }

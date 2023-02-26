@@ -57,11 +57,12 @@ class Form extends Component {
 
   render() {
     return this.state.isSubmitted ? <Navigate to='/list' /> : <section className="form">
+      <h1>Post your article:</h1>
       <form onSubmit={this.submitArticle} >
         <Box sx={{ minWidth: 120 }} >
-        <TextField required id="standard-required" type="text" label="title" name="title" margin="normal" />
+        <TextField required id="standard-required" type="text" label="Title" name="title" margin="normal" />
         <TextField required id="standard-required" type="url" label="Photo url" name="img" margin="normal" />
-        <TextField id="standard-required" type="url" label="Article url" name="url" margin="normal" />
+        <TextField  id="standard-required" type="url" label="Article url" name="url" margin="normal" />
         <TextField required id="standard-multiline-static" label="Abstract" multiline rows={4} name="abstract" margin="normal"/>
         <FormControl className="form-select" variant="standard" sx={{ m: 1, maxWidth: 120 }} >
           <InputLabel id="demo-simple-select-filled-label">Section*</InputLabel>

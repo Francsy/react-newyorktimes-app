@@ -22,7 +22,7 @@ class Home extends Component {
     return !name ?
       <section className="home">
         <h1>Welcome!</h1>
-        <h2>Introduce yourself to post your own posts!</h2>
+        <h2>Introduce yourself to start posting your own news!</h2>
         <div className="__home-input-div">
           <input required type="text" className="input" ref={this.nameInput} />
           <span className="bar"></span>

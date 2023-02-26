@@ -2,8 +2,13 @@
 @import '../utils/variables.scss';
 
 .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &>h1 {
-        margin: 7% 0%;
+        @include shadow-title;
+        // margin: 7% 0%;
+        // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
     &>h2 {
         margin: 5%;
@@ -11,12 +16,45 @@
     &> .__home-input-div {
         @include special-input-div;
         margin: 10%;
-        
+
     }
     &> button {
         background-color: $second-bcolor;
         &:hover{
             background-color: $second-bcolorlight;
         }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+    .home{
+        padding: 5%;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .home{
+        & * {
+            font-size: 1.5em;
+        }
+        
+        &>h1 {
+            margin: 3% 0%;
+            font-size: 4em;
+
+        }
+        &>h2 {
+            margin: 3%;
+            font-size: 2em;
+        }
+        &> .__home-input-div {
+            @include special-input-div;
+            margin: 4%;
+        
+        }
+        &> button {
+            font-size: 1.2em;
+        }
+    
     }
 }
