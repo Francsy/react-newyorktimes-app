@@ -1,0 +1,21 @@
+@import '../utils/variables.scss';
+
+.header {
+    min-height: 5vh;
+
+    &> div{
+        background-color: $second-bcolor;
+        & .large-logo, .small-logo {
+            height: 40px;
+        }
+    }
+    & span {
+        color: $second-fcolor;
+        font-size: 0.9em;
+    }
+}
+
+.css-1uwgr7b-MuiTypography-root {
+    color: black;
+}
+
