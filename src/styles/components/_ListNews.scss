@@ -1,0 +1,68 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+
+.listnews {
+ 
+    &>h1{
+        @include shadow-title;
+        
+    }
+    &>.news-box {
+        padding: 5%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+        justify-content: space-between;
+        align-items: stretch;
+
+        &>h1 {
+            @include shadow-title;
+        }
+
+        &>div {
+            margin: 0px;
+
+            & button {
+                color: $second-bcolor;
+            }
+
+            & .MuiTypography-h5 {
+                font-weight: 500;
+            }
+
+            & .MuiTypography-body1 {
+                color: $second-bcolor;
+            }
+        }
+
+    }
+
+
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+
+    .listnews {
+        padding: 5%;
+        &>h1 {
+            margin: 1%;
+            font-size: 2.5em;
+        }
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    
+
+    .listnews {
+        margin-top: 20px;
+        padding: 2%;
+        &>h1 {
+            margin: 1%;
+            font-size: 3em;
+        }
+    }
+}
