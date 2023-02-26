@@ -1,9 +1,14 @@
 @import '../utils/mixins.scss';
 
 .form {
-    padding: 5%;
+    
     &> h1{
         @include shadow-title;
+        
+    }
+    &> form {
+        margin-top: 0px;
+        padding: 1% 5%;
     }
     &> form div {
         display: grid;
@@ -21,6 +26,15 @@
         background-color: $second-bcolor;
         &:hover{
             background-color: $second-bcolorlight;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1366px) {
+    .form{
+        &>h1 {
+            margin: 2%;
         }
     }
 }
