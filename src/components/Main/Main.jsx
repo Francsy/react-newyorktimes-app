@@ -23,7 +23,7 @@ class Main extends Component {
   }
 
   render() {
-    return <main>
+    return <main className="main">
       <Routes>
       <Route path='/' element={<Home />}/>
       <Route path='/list' element={<ListNews deleteOwnPost={this.deleteOwnPost} ourArticles={this.state.ourArticles} />} />

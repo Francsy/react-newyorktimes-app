@@ -3,6 +3,7 @@
 
 
 .header {
+    min-height: 5vh;
 
     &> div{
         background-color: $second-bcolor;
