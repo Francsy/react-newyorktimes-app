@@ -1,12 +1,39 @@
 import React, { Component } from "react";
+import Nav from './Nav'
+
+class Header extends Component {
+
+  render() {
+    return <>
+      <Nav />
+      </>
+  }
+}
+
+export default Header;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// VERSION ANTERIOR:
+
+
+/* import React, { Component } from "react";
 import { userContext } from "../../context/userContext";
 import Nav from './Nav'
 
 class Header extends Component {
 
   static contextType = userContext;
-
-
 
   render() {
     const { name } = this.context;
@@ -18,3 +45,4 @@ class Header extends Component {
 }
 
 export default Header;
+ */
