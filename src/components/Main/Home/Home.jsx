@@ -11,7 +11,7 @@ class Home extends Component {
   saveName = () => {
     const { setNewName } = this.context
     if(this.nameInput.current.value.length > 0) {
-      setNewName(this.nameInput.current.value)
+      this.nameInput.current.value.length < 20 ? setNewName(this.nameInput.current.value) : alert('Your name must have less than 20 characters')
     }
   }
 
