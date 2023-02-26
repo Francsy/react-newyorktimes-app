@@ -1,0 +1,16 @@
+@import '../utils/variables.scss';
+
+.header {
+    &> div{
+        background-color: $second-bcolor;
+    }
+    & span {
+        color: $second-fcolor;
+        font-size: 0.9em;
+    }
+   
+}
+
+.css-1uwgr7b-MuiTypography-root {
+    color: black;
+}
