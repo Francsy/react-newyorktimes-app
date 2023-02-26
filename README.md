@@ -19,7 +19,7 @@ You can try out a demo of this project. Check it at [here!](https://sage-youtiao
 
 <br>
 
-### Want to run it locally? Installation:
+## Want to run it locally? Installation:
 
 Installation
 To install this project, you´ll just need to follow three steps:
