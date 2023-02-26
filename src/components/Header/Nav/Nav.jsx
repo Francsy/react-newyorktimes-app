@@ -51,7 +51,7 @@ class Nav extends Component {
 
 
     return (
-      <AppBar className="header" position="static">
+      <AppBar className="header" position="static" sx={{ backgroundColor: '#3F6E93' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -126,7 +126,7 @@ class Nav extends Component {
                 </Link>
               </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+            {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
             {/* <Link to="/"> */}
             <Typography
               variant="h5"
