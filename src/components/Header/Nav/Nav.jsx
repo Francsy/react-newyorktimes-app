@@ -106,24 +106,25 @@ class Nav extends Component {
                   display: { xs: 'block', md: 'none' },
                 }}
               >
-               {/*  {pages.map((page) => (
+                {/*  {pages.map((page) => (
                   <MenuItem key={page} onClick={this.handleCloseNavMenu}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))} */}
                 <Link to="/">
-                 <MenuItem onClick={this.handleCloseNavMenu}>
-                    <Typography textAlign="center">{'Home'}</Typography>
+                  <MenuItem onClick={this.handleCloseNavMenu}>
+                  <Typography textAlign="center" sx={{ fontWeight:600, color: '#3F6E93' }}>{'Home'}</Typography>
+
                   </MenuItem>
                 </Link>
                 <Link to="/list">
-                 <MenuItem onClick={this.handleCloseNavMenu}>
-                    <Typography textAlign="center">{'News!'}</Typography>
+                  <MenuItem onClick={this.handleCloseNavMenu}>
+                    <Typography textAlign="center" sx={{ fontWeight:600, color: '#3F6E93' }}>{'News!'}</Typography>
                   </MenuItem>
                 </Link>
                 <Link to="/form">
-                 <MenuItem onClick={this.handleCloseNavMenu}>
-                    <Typography textAlign="center">{'Post!'}</Typography>
+                  <MenuItem onClick={this.handleCloseNavMenu}>
+                    <Typography textAlign="center" sx={{ fontWeight:600, color: '#3F6E93' }}>{'Post!'}</Typography>
                   </MenuItem>
                 </Link>
               </Menu>
@@ -146,13 +147,13 @@ class Nav extends Component {
                 textDecoration: 'none',
               }}
             >
-            <img className="small-logo" src="/assets/small-logo.png" alt="" />
+              <img className="small-logo" src="/assets/small-logo.png" alt="" />
 
             </Typography>
             {/* </Link> */}
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               <Link to="/">
-               <Button
+                <Button
                   key={'Home'}
                   onClick={this.handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block', textDecoration: 'none' }}
@@ -161,7 +162,7 @@ class Nav extends Component {
                 </Button>
               </Link>
               <Link to="/list">
-               <Button
+                <Button
                   key={'News!'}
                   onClick={this.handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
@@ -170,7 +171,7 @@ class Nav extends Component {
                 </Button>
               </Link>
               <Link to="/form">
-               <Button
+                <Button
                   key={'Post!'}
                   onClick={this.handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
@@ -179,44 +180,44 @@ class Nav extends Component {
                 </Button>
               </Link>
             </Box>
-            {name ? 
-            <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
-                <IconButton onClick={this.handleOpenUserMenu} sx={{ p: 0 }}>
-                  {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /> */}
-                  <span>{name}</span>
-                  {/* <Typography textAlign="center">{name}</Typography> */}
-                </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: '45px' }}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={this.handleCloseUserMenu}
-              >
-                {/* {settings.map((setting) => (
+            {name ?
+              <Box sx={{ flexGrow: 0 }}>
+                <Tooltip title="Open settings">
+                  <IconButton onClick={this.handleOpenUserMenu} sx={{ p: 0 }}>
+                    {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /> */}
+                    <span>{name}</span>
+                    {/* <Typography textAlign="center">{name}</Typography> */}
+                  </IconButton>
+                </Tooltip>
+                <Menu
+                  sx={{ mt: '45px' }}
+                  id="menu-appbar"
+                  anchorEl={anchorElUser}
+                  anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  open={Boolean(anchorElUser)}
+                  onClose={this.handleCloseUserMenu}
+                >
+                  {/* {settings.map((setting) => (
                   <MenuItem key={setting} onClick={this.handleCloseUserMenu}>
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
                 ))} */}
-                
+
                   <MenuItem onClick={removeName}>
                     <Typography textAlign="center">Logout</Typography>
                   </MenuItem>
-                
-              </Menu>
-            </Box>: 
-            <></>}
+
+                </Menu>
+              </Box> :
+              <></>}
           </Toolbar>
         </Container>
       </AppBar>
